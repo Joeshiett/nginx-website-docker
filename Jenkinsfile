@@ -5,7 +5,7 @@ node {
         checkout scm
     }
     stage('Build image') {
-        app = docker.build("Joeshiett/nginx-website-docker")
+        app = docker.build("nginx-website-docker")
     }
     stage('Test image') {
         app.inside {
